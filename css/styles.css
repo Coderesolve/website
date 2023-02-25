@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+}
+
+.landing {
+    background-color: rgb(48, 44, 44);
+    height: 100svh;
+    padding: 1svh;
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+    align-content: center;
+    justify-content: center;
+}
+
+.mainlogo {
+    width: 350px;
+    height: 350px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.text {
+    /* background-color: green; */
+}
