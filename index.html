@@ -1,50 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Home</title>
-  <link href="css/styles.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" href="images/favicon/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Code ReSolve</title>
 </head>
 
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="members.html">Members</a>
+    <a href="events.html">Events</a>
+    <a href="resources.html">Resources</a>
+  </nav>
 
-  <div class="landing">
-    <div class="img-track">
-      <img class="bg-img" src="images/IMG_9424.jpg">
-      <img class="bg-img" src="images/IMG_0470.jpg">
+  <div class="home-container">
+    <div class="left-content">
+      <img src="https://rsqc.github.io/images/logo.png" alt="Logo" class="logo">
+      <h1>Code ReSolve</h1>
+      <p>The Computer Science Club of CUNY Queens College
+      </p>
     </div>
-    <div class="overlay">
-      <div class="logo">
-        <img class="mainlogo" src="https://rsqc.github.io/images/logo.png">
-      </div>
-      <div class="text">
-        <h1>Code ReSolve</h1>
-        <p>The Computer Science Club of CUNY Queens College</p>
-        <!-- <p> A club that aims to bring people together for the purpose of sharing ideas through tech. ReSolve is organized by students at CUNY Queens College. We hope to create a space where we share and collaborate on ideas.</p> -->
+    <div class="right-content">
+      <div class="image-slider" id="image-slider">
+        <!-- Add images here as many as you want -->
+        <img src="images/IMG_9424.jpg" alt="Image 1">
+        <img src="images/IMG_0470.jpg" alt="Image 2">
+
       </div>
     </div>
-
-
-
-
   </div>
-  <script>
-    const images = document.querySelectorAll('.bg-img');
-    let index = 0;
 
-    setInterval(() => {
-      images[index].classList.remove('active');
-      index++;
-      if (index === images.length) {
-        index = 0;
-      }
-      images[index].classList.add('active');
-    }, 5000);
-  </script>
-
+  <script src="script/script.js"></script>
 </body>
 
 </html>

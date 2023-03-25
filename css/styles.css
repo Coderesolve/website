@@ -1,67 +1,108 @@
 body {
-    text-align: center;
+    background-image: radial-gradient(circle at left, lightblue, rgb(235, 133, 235));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* main div */
-.landing {
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.home-container {
+    padding-top: 4rem;
+    /* Adjust this value based on the height of the navbar */
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 2rem;
+    width: 100%;
+    /* max-width: 1200px; */
+    min-height: 75vh;
+}
+
+.left-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.logo {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.right-content {
+    width: 45%;
     position: relative;
     overflow: hidden;
-    height: 100svh;
-    padding: 1svh;
 }
 
-/* logo div */
-.logo {
+.image-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
+}
+
+.image-slider img {
     width: 100%;
-    height: 50%;
-    align-content: center;
-    justify-content: center;
-}
-
-/* img tag */
-.mainlogo {
-    width: 350px;
-    height: 350px;
-    align-self: center;
-    justify-self: center;
-
-}
-
-/* bg image div */
-.img-track {
-    position: fixed;
-    width: 100%;
-    height: 100svh;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.bg-img {
+    height: 100%;
+    object-fit: cover;
     position: absolute;
-    width: 100%;
-    height: 100svh;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: 1.5s ease-in;
+    transition: transform 1s ease;
+    border-radius: 5px;
 }
 
-.bg-img.active {
-    opacity: 1;
-}
 
-/* bg image overlay */
-.overlay {
-    width: 100%;
-    height: 100svh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    position: absolute;
-    top: 0;
-}
 
-.text {
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+    }
 
-    color: whitesmoke;
+    .home-container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+
+    .left-content {
+        padding: 2rem 0;
+    }
+
+    .logo {
+        width: 90%;
+        /* Change this value to adjust the logo size on mobile devices */
+    }
+
+    .right-content {
+        margin-top: 2rem;
+        height: 50vh;
+    }
 }
