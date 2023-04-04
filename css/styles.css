@@ -1,5 +1,5 @@
 body {
-    background-image: radial-gradient(circle at left, lightblue, rgb(235, 133, 235));
+    background-image: radial-gradient(circle at left, hsl(195, 57%, 71%), hsl(300, 85%, 82%));
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,6 +18,7 @@ nav {
     z-index: 1000;
 }
 
+/*HomePage Styles*/
 .home-container {
     padding-top: 4rem;
     /* Adjust this value based on the height of the navbar */
@@ -93,7 +94,6 @@ nav {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-    /* background-image: linear-gradient(45deg, rgba(74, 104, 159, 0.1), rgba(25, 47, 93, 0.1)); */
 }
 
 .team-title {
