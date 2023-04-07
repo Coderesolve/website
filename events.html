@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Club - Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .event {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            width: calc(33% - 20px);
+        }
+
+        .event img {
+            max-width: 100%;
+        }
+
+        .event h3 {
+            margin-top: 0;
+        }
+
+        .event p {
+            margin-bottom: 0;
+        }
+
+        .future-event {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="members.html">Members</a>
+        <a href="events.html">Events</a>
+        <a href="resources.html">Resources</a>
+    </nav>
+
+    <h1>Future Events</h1>
+    <div class="container">
+        <!-- Future Event 1 -->
+        <div class="event future-event">
+            <h3>Event 1</h3>
+            <p>Date: 2023-04-10 Time: 14:00</p>
+            <p>Event 1 description.</p>
+            <!-- Add an image or video if needed -->
+        </div>
+        <!-- Add more future events as needed -->
+    </div>
+
+    <h1>Past Events</h1>
+    <div class="container">
+        <!-- Past Event 1 -->
+        <div class="event">
+            <h3>Event 2</h3>
+            <p>Date: 2023-03-20 Time: 16:00</p>
+            <p>Event 2 description.</p>
+            <img src="event2-image.jpg" alt="Event 2">
+        </div>
+        <!-- Add more past events as needed -->
+    </div>
+
+</body>
+
+</html>
