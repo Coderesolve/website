@@ -4,73 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Club - Events</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+    <title>Code ReSolve Events</title>
+    <link rel="stylesheet" href="css/styles.css">
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
 
-        .event {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin: 10px;
-            width: calc(33% - 20px);
-        }
+    <!-- Calendar ImportMap -->
+    <script type='importmap'>
+      {
+        "imports": {
+          "@fullcalendar/core": "https://cdn.skypack.dev/@fullcalendar/core@6.1.5",
+          "@fullcalendar/daygrid": "https://cdn.skypack.dev/@fullcalendar/daygrid@6.1.5"
 
-        .event img {
-            max-width: 100%;
         }
+      }
+    </script>
+    <!-- Calendar Initialization -->
+    <script type='module'>
+        import { Calendar } from '@fullcalendar/core';
+        import dayGridPlugin from '@fullcalendar/daygrid';
 
-        .event h3 {
-            margin-top: 0;
-        }
+        const events = [
+            {
+                title: "Event 1",
+                start: "2023-04-10T14:00:00",
+                description: "Event 1 description."
+            },
+            {
+                title: "Event 2",
+                start: "2023-04-20T16:00:00",
+                end: "2023-04-20T17:00:00",
+                description: "Event 2 description.",
+            },
+            // ...add more events as needed
+        ];
 
-        .event p {
-            margin-bottom: 0;
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarEl = document.getElementById('calendar')
+            const calendar = new Calendar(calendarEl, {
+                plugins: [dayGridPlugin],
+                events: events,
+                initialView: 'dayGridMonth',
+                headerToolbar: {
+                    prev: 'chevron-left',
+                    next: 'chevron-right',
+                    left: 'prev,next,today',
+                    center: 'title',
+                    right: 'dayGridMonth,dayGridWeek,dayGridDay',
 
-        .future-event {
-            background-color: #f0f8ff;
-        }
-    </style>
+                },
+                eventClick: function (calEvent, jsEvent, view) {
+                    alert("Event: " + calEvent.title + "\nDescription: " + calEvent.description);
+                },
+            })
+            calendar.render()
+        })
+    </script>
+
+
+
 </head>
 
 <body>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="members.html">Members</a>
-        <a href="events.html">Events</a>
-        <a href="resources.html">Resources</a>
-    </nav>
-
-    <h1>Future Events</h1>
     <div class="container">
-        <!-- Future Event 1 -->
-        <div class="event future-event">
-            <h3>Event 1</h3>
-            <p>Date: 2023-04-10 Time: 14:00</p>
-            <p>Event 1 description.</p>
-            <!-- Add an image or video if needed -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="members.html">Members</a>
+            <a href="events.html">Events</a>
+            <a href="resources.html">Resources</a>
+        </nav>
+        <h1>Upcoming Events</h1>
+        <div class="cal">
+            <div id='calendar'></div>
         </div>
-        <!-- Add more future events as needed -->
-    </div>
-
-    <h1>Past Events</h1>
-    <div class="container">
-        <!-- Past Event 1 -->
-        <div class="event">
-            <h3>Event 2</h3>
-            <p>Date: 2023-03-20 Time: 16:00</p>
-            <p>Event 2 description.</p>
-            <img src="event2-image.jpg" alt="Event 2">
-        </div>
-        <!-- Add more past events as needed -->
     </div>
 
 </body>

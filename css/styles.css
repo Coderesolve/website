@@ -93,7 +93,7 @@ nav {
     border-radius: 5px;
 }
 
-/* Members Section */
+/* Members Page Styles */
 
 body.members {
     background-color: #455a64;
@@ -195,6 +195,31 @@ body.members {
     transform: scale(1.1);
 }
 
+.container {
+    background-image: radial-gradient(circle at left, hsl(195, 57%, 71%), hsl(300, 85%, 82%));
+    min-height: 100vh;
+    max-width: 100svw;
+    width: 100%;
+    margin: 0;
+    display: block;
+
+}
+
+.cal {
+    max-width: 800px;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+
+}
+
+#calender {
+    max-width: 500px;
+    width: 100%;
+    margin: 40px auto;
+}
+
 @media (max-width: 768px) {
     body {
         justify-content: flex-start;
@@ -237,5 +262,15 @@ body.members {
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+
+    .cal {
+        max-width: 768px;
+        width: 80%;
+        margin: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+
     }
 }
